@@ -1,0 +1,18 @@
+nav{
+    height: 10vh;
+    background-color: rgb(23, 23, 22) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-link {
+    color: rgb(180, 178, 178);
+    margin: 1rem;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: rgb(246, 175, 43);
+}
+nav .active {
+    color: rgb(206, 171, 16);
+}

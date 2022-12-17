@@ -1,0 +1,44 @@
+*{
+    font-family: sans-serif;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+nv{
+    height: 10vh;
+    background-color: rgb(23, 23, 22) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlink{    
+    color: white;
+    text-decoration: none;
+    margin: 1rem;    
+}
+.navlink:hover{
+    color: rgb(108, 224, 13);
+}
+nav .active {
+    color: rgb(108, 224, 13);
+}
+
+section {
+    display: grid;
+    grid-gap: 1rem;    
+}
+article{
+    background-color: rgb(220, 230, 239);
+}
+@media screen and (min-width: 600px) {
+    section {
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (min-width: 992px) {
+    section {
+        grid-template-columns: auto auto auto;
+    }
+}
+

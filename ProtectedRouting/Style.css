@@ -1,0 +1,35 @@
+*{
+    font-family: sans-serif;
+    text-align: justify;
+    box-sizing: border-box;
+}
+.navlink{
+    color: white;
+    text-decoration: none;
+    margin: 1rem;    
+}
+.navlink:hover{
+    color: rgb(108, 224, 13);
+}
+nav .active {
+    color: rgb(108, 224, 13);
+}
+
+section {
+    display: grid;
+    grid-gap: 1rem;    
+}
+article{
+    background-color: rgb(220, 230, 239);
+}
+@media screen and (min-width: 600px) {
+    section {
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (min-width: 992px) {
+    section {
+        grid-template-columns: auto auto auto;
+    }
+}
+

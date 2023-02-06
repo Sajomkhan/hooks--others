@@ -1,16 +1,16 @@
+import React from 'react'
 
-const Child = ({parentdata1, parentdata2, childdata}) => { //props distructure
+const Child = (props) => {
 
-    const data = 'Child to Parents data send'
+    const data = 'I am child data.'
+    props.onChildData(data)
 
-    childdata(data);
-    
-    return (
-        <div>
-            <h1>Child</h1>
-            <p>In Child: {parentdata1}</p>
-            <p>In Child: {parentdata2}</p>
-        </div>
-    )
+  return (
+    <div>
+        <h3>This is Child Component:</h3>
+        <h3>{props.data}</h3>
+    </div>
+  )
 }
-export default Child;
+
+export default Child

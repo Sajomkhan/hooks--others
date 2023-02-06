@@ -1,24 +1,29 @@
+import React, { useState } from 'react'
+import Child from './Child'
 
-import Child from '../State_Lifting/Child';
+const Parent = () => {
 
-const Parents = () => {
-    const parentdata1 = 'I am Parents Data -1'
-    const parentdata2 = 'I am Parents Data -2'
+    const [childData, setChildData] = useState('')
 
-    function handleChildData(childData) {
-        console.log(childData);
-        return (childData);        
+    const data = "I am parent data."
+
+    const handleChildData =(childContain)=> {
+        return setChildData(childContain)
     }
-    return (
-        <div>
-            <h1>Parents</h1>   
-            <Child  
-            parentdata1= {parentdata1} 
-            parentdata2= {parentdata2} 
-            childdata={handleChildData}
-            />
-            <h1>In Parents: </h1>   
+
+  return (
+    <div className=''>
+        <div className='w-50 m-5 bg-primary px-5 py-3 text-white rounded-3 w-30'>
+            <Child data={data} onChildData={handleChildData} />            
         </div>
-    )
+
+         
+        <div className='w-50 m-5 bg-primary px-5 py-3 text-white rounded-3 w-30'>
+            <h3>This is Parrent Component:</h3>
+            <h3>{childData}</h3>            
+        </div>
+    </div>
+  )
 }
-export default Parents;
+
+export default Parent

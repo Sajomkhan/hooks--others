@@ -17,7 +17,7 @@ function Component1() {
       <p1>I am Component1</p1>
       <Component2 />
 
-      <UserContext.Provider value={user}>
+      <UserContext.Provider user={user} setUser={setUser}>
         <Component4 />
         <Component3 />
       </UserContext.Provider>

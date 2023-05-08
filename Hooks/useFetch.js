@@ -24,9 +24,11 @@ const useFetch = () => {
   return { loading, error, data }
 
 export default useFetch
-    
-    
-// --------------------------------------------
+
+// ----------------------------------------------------------------
 // use this useFetch fom another pages as like:
 import useFetch from './hooks/useFetch'
 let { loading, error, data } = useFetch('https://jsonpl')
+if(loading) return <h3>Loading...</h3>
+if(error) return <h3>Error!</h3>
+console.log(data);
